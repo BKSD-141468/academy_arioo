@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace turn_into_binary_Csharp1_
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Please Enter last 4 digit of your student number:");
+            string UserInput = Console.ReadLine();  
+            int User4Digit = Convert.ToInt32(UserInput);
+            List<int> Mods2 = new List<int>();
+            while (0 < User4Digit)
+            {
+                int remainder = User4Digit % 2; ;
+                Mods2.Add(remainder);
+                User4Digit = User4Digit / 2;
+            }
+            Mods2.Reverse();
+            string BinaryForm = string.Join("", Mods2);
+            Console.WriteLine($"Binary of {UserInput} is : {BinaryForm}");
+            Console.ReadKey();
+        }
+    }
+}
