@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Enter Your a number grater than 2:");
+            int UserInput = Convert.ToInt32(Console.ReadLine());
+            if (UserInput <= 2)
+            { Console.WriteLine("Try Again!"); Console.ReadKey(); }
+            int F1 = 0;
+            int F2 = 1;
+            int F3;
+            Console.WriteLine($"Fibonacci sequence up to {UserInput} terms:");
+            Console.Write($"{F1}, {F2},");
+
+            for (int i = 0; i < UserInput; i++)
+            {
+                F3 = F1 + F2;
+                Console.Write($" {F3},");   
+                F1 = F2;
+                F2 = F3;
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
