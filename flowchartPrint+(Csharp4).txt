@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Enter Your a number :");
+            int UserInput = Convert.ToInt32(Console.ReadLine());
+            int i = 0;
+            int j = 0;
+            //Console.WriteLine("+");
+            i += 1;
+            while (j <= UserInput)
+            {
+                while (i <= j)
+                {
+                    Console.Write("+");
+                    i++;
+                }
+                Console.WriteLine(); i = 1; j++;
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
