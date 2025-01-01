@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Enter Your Number:");
+            int UserValue = Convert.ToInt32(Console.ReadLine());
+            float ExInt = UserValue;
+            if (UserValue % 2 == 0)
+            {
+                Console.WriteLine($"{UserValue} is Even");
+                Console.WriteLine(UserValue*2);
+            }
+            else
+            {
+                ExInt /= 2;
+                Console.WriteLine($"{UserValue} is Odd");
+                Console.WriteLine(ExInt);
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
